@@ -64,8 +64,6 @@ const WeatherApp = () => {
         country,
       });
 
-    //  displayWeather();
-
     } catch (error) {
       setNotification({
         display: 'block',
@@ -74,20 +72,7 @@ const WeatherApp = () => {
     }
   };
   
-
-  // Display weather to UI
-  /*const displayWeather = () => {
-    setWeather((prevWeather) => ({
-      ...prevWeather,
-      iconId: weather.iconId,
-      temperature: { ...prevWeather.temperature, value: weather.temperature.value },
-      description: weather.description,
-      city: weather.city,
-      country: weather.country,
-    }));
-  };*/
-
-  // Celsius to Fahrenheit conversion
+   // Celsius to Fahrenheit conversion
   const celsiusToFahrenheit = (temperature) => {
     return (temperature * 9) / 5 + 32;
   };

@@ -44,7 +44,7 @@ const WeatherApp = () => {
 
   // Get weather data from API
   const getWeather = async (latitude, longitude) => {
-    const api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+    const api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
 
     try {
       const response = await fetch(api);
@@ -64,7 +64,7 @@ const WeatherApp = () => {
         country,
       });
 
-      /*displayWeather();*/
+      displayWeather();
 
     } catch (error) {
       setNotification({
@@ -76,7 +76,7 @@ const WeatherApp = () => {
   
 
   // Display weather to UI
- /* const displayWeather = () => {
+  const displayWeather = () => {
     setWeather((prevWeather) => ({
       ...prevWeather,
       iconId: weather.iconId,
@@ -86,7 +86,7 @@ const WeatherApp = () => {
       country: weather.country,
     }));
   };
-*/
+
   // Celsius to Fahrenheit conversion
   const celsiusToFahrenheit = (temperature) => {
     return (temperature * 9) / 5 + 32;
